@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="s1" class="org.example.entity.Student">
+        <constructor-arg><value>Amlan</value></constructor-arg>
+        <constructor-arg><value>Angul</value></constructor-arg>
+
+<!--        <property name="name" value="Amlan"/>-->
+<!--        <property name="address" value="Angul"/>-->
+
+    </bean>
+
+</beans>
