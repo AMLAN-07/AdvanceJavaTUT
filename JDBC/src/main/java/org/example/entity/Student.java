@@ -1,13 +1,25 @@
 package org.example.entity;
 
 public class Student {
-    String name;
-    String Address;
+   private int id;
+   private String name;
+   private String domain;
 
-    public Student(String name, String address) {
-        super();
+    public Student() {
+    }
+
+    public Student(int id, String name, String domain) {
+        this.id = id;
         this.name = name;
-        Address = address;
+        this.domain = domain;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -18,11 +30,20 @@ public class Student {
         this.name = name;
     }
 
-    public String getAddress() {
-        return Address;
+    public String getdomain() {
+        return domain;
     }
 
-    public void setAddress(String address) {
-        Address = address;
+    public void setdomain(String domain) {
+        this.domain = domain;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", domain='" + domain + '\'' +
+                '}';
     }
 }
