@@ -1,0 +1,16 @@
+# Folder JDBC
+JDBC/.idea
+JDBC/.settings
+JDBC/.vscode
+JDBC/src/test
+JDBC/target
+
+# Folder TomCatServelet
+TomCatServelet/.idea
+TomCatServelet/.smarttomcat
+TomCatServelet/target
+
+# Folder Transaction
+Transaction/.idea
+Transaction/test
+Transaction/target
