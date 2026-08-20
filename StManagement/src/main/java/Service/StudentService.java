@@ -10,14 +10,15 @@ import java.sql.SQLException;
 
 public class StudentService {
 
-    public boolean register(int id,String name,String email,String password){
+    public boolean register(int id,String name,String email,int redgno,String password){
         try {
             Connection con= DBConnection.getConnection();
-            PreparedStatement pr= con.prepareStatement("insert into students values (?,?,?,?)");
+            PreparedStatement pr= con.prepareStatement("insert into students values (?,?,?,?,?)");
             pr.setInt(1,id);
             pr.setString(2,name);
             pr.setString(3,email);
-            pr.setString(4,password);
+            pr.setInt(4,redgno);
+            pr.setString(5,password);
             int rows=pr.executeUpdate();
             if (rows>0){
                 return true;

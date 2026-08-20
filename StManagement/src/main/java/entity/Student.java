@@ -57,4 +57,15 @@ public class Student {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", regdno=" + regdno +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }
