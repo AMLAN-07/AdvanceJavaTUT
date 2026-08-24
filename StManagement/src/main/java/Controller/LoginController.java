@@ -20,10 +20,7 @@ public class LoginController extends HttpServlet {
         String password=request.getParameter("password");
         email=email.toLowerCase();
         StudentService service=new StudentService();
-//        Cookie ck[]=request.getCookies();
-//        response.addCookie(ck[]);
-//        Cookie ck=new Cookie(email,password);
-//        response.addCookie(ck);
+
         Student st=service.validate(email,password);
         if(st!=null){
             System.out.println(st);
