@@ -23,8 +23,14 @@ public class LoginController extends HttpServlet {
 
         Student st=service.validate(email,password);
         if(st!=null){
+            Cookie cookie=new Cookie("email",email);
+            response.addCookie(cookie);
+            cookie.setMaxAge(60*60);
+
             System.out.println(st);
             response.sendRedirect("home.html");
+        }else {
+            response.sendRedirect("login.html");
         }
 
 
