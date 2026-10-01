@@ -7,8 +7,8 @@ public class DBConnection {
 
     public static Connection getConnection() {
         try {
-            String url = "jdbc:mysql://localhost:3306/jdbc";
-            String user = "root";
+            String url = "jdbc:postgresql://localhost:5432/studentdb";
+            String user = "postgres";
             String password = "hzkk4567@A";
 
             return DriverManager.getConnection(url, user, password);
@@ -18,5 +18,5 @@ public class DBConnection {
         }
         return null;
     }
-    
+
 }
