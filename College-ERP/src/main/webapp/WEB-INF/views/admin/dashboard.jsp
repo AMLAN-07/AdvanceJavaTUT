@@ -44,8 +44,16 @@
             Course Management
         </a>
     </li>
-    <li>Attendance Management</li>
-    <li>Result Management</li>
+    <li>
+        <a href="<%= request.getContextPath() %>/attendance">
+            Attendance Management
+        </a>
+    </li>
+    <li>
+        <a href="<%= request.getContextPath() %>/result">
+            Result Management
+        </a>
+    </li>
     <li>Reports</li>
 
 </ul>

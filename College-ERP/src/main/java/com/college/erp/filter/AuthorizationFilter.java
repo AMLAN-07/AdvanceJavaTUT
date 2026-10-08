@@ -19,7 +19,11 @@ import java.io.IOException;
         "/student",
         "/student/*",
         "/course",
-        "/course/*"
+        "/course/*",
+        "/attendance",
+        "/attendance/*",
+        "/result",
+        "/result/*"
 })
 public class AuthorizationFilter implements Filter {
 
@@ -91,6 +95,30 @@ public class AuthorizationFilter implements Filter {
 
         if (uri.equals(httpRequest.getContextPath() + "/course")
                 || uri.startsWith(httpRequest.getContextPath() + "/course/")) {
+
+            if (!"ADMIN".equals(role)) {
+                httpResponse.sendError(
+                        HttpServletResponse.SC_FORBIDDEN,
+                        "Access Denied"
+                );
+                return;
+            }
+        }
+
+        if (uri.equals(httpRequest.getContextPath() + "/attendance")
+                || uri.startsWith(httpRequest.getContextPath() + "/attendance/")) {
+
+            if (!"ADMIN".equals(role)) {
+                httpResponse.sendError(
+                        HttpServletResponse.SC_FORBIDDEN,
+                        "Access Denied"
+                );
+                return;
+            }
+        }
+
+        if (uri.equals(httpRequest.getContextPath() + "/result")
+                || uri.startsWith(httpRequest.getContextPath() + "/result/")) {
 
             if (!"ADMIN".equals(role)) {
                 httpResponse.sendError(
